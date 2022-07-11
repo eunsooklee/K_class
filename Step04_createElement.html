@@ -40,7 +40,7 @@
             //1. 입력한 이름을 읽어온다.
             let name=document.querySelector("#inputName").value;
             //2. li 요소를 만들어서 입력한 이름을 innerText 에 넣어준다.
-            let li=document.createElement("li");
+            let li=document.createElement("li"); //
             li.innerText=name;
             //3. 만든 li 요소를 ul 의 자식요소로 추가하기 
             document.querySelector("#list").append(li);
@@ -50,7 +50,7 @@
             li.addEventListener("click", function(){
                 let isDelete=confirm(this.innerText+" 를(을) 삭제 하시겠습니까?");
                 if(isDelete){
-                    this.remove();
+                    this.remove(); //this = XXX = li = event를 한 그 요소
                 }      
             });
         }
@@ -69,6 +69,7 @@
                 }         
             });
         }
+        //lis.addEventListener 배열에 addE함수는 없어서 불가능 lis[i] 배열 문서객체에 함수가 있다.
 
     </script>
 </body>

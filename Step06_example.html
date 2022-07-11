@@ -45,12 +45,12 @@
             //입력한 내용을 읽어온다.
             let name=document.querySelector("#inputName").value;
             let addr=document.querySelector("#inputAddr").value;
-
+            // `` backted 는 연결연산자 대신 <td>${name}</td> 로 표현가능
             let str=`
                 <tr>
-                    <td>${name}</td>
+                    <td>${name}</td> 
                     <td>${addr}</td>
-                <tr>
+                </tr>
             `;
             
             document.querySelector("tbody").insertAdjacentHTML("beforeend", str);
